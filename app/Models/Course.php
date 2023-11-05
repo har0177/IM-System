@@ -17,6 +17,10 @@
 				{
 						return $this->hasMany( Student::class );
 				}
+				public function scopeActive( $query )
+				{
+						return $query->where( 'status', 1 );
+				}
 				
 				
 		}
